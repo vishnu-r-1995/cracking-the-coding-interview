@@ -1,6 +1,7 @@
 from src.TreeNode import TreeNode
 from src.BinaryTreeInverter import BinaryTreeInverter
 from src.BinaryTreeHeightBalanceChecker import BinaryTreeHeightBalanceChecker
+from src.BinaryTreePathAnalyzer import BinaryTreePathAnalyzer
 
 def invert_binary_tree():
     left = TreeNode(2, None, None)
@@ -17,3 +18,6 @@ left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
 root = TreeNode(5, left, right)
 print(bb.isBalanced(root))
+
+btp = BinaryTreePathAnalyzer()
+btp.binaryTreePaths(root)
