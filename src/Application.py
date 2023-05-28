@@ -6,6 +6,7 @@ from src.ArrayElementRemover import ArrayElementRemover
 from src.ArrayDuplicateElementRemoverInPlace import ArrayDuplicateElementRemoverInPlace
 from src.ArrayDuplicateElementRemoverWithAtmostTwo import ArrayDuplicateElementRemoverWithAtmostTwo
 from src.MajorityElementFinder import MajorityElementFinder
+from src.ArrayRotator import ArrayRotator
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -46,4 +47,10 @@ def callMajorityElementFinder():
     val = mef.majorityElement(arr)
     print(val)
 
-callMajorityElementFinder()
+arr2 = [1,2,3,4,5,6,7]
+def callArrayRotator():
+    ar = ArrayRotator()
+    arr = ar.rotate(arr2, 6)
+    print(arr)
+    
+callArrayRotator()
