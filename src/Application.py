@@ -4,25 +4,25 @@ from src.BinaryTreeHeightBalanceChecker import BinaryTreeHeightBalanceChecker
 from src.BinaryTreePathAnalyzer import BinaryTreePathAnalyzer
 from src.ArrayElementRemover import ArrayElementRemover
 from src.ArrayDuplicateElementRemoverInPlace import ArrayDuplicateElementRemoverInPlace
+from src.ArrayDuplicateElementRemoverWithAtmostTwo import ArrayDuplicateElementRemoverWithAtmostTwo
+from src.MajorityElementFinder import MajorityElementFinder
 
-def invert_binary_tree():
-    left = TreeNode(2, None, None)
-    right = TreeNode(4, None, None)
-    root = TreeNode(5, left, right)
-    
-    b = BinaryTreeInverter()
-    b.invertTree(root)
-    print(root)
-
-invert_binary_tree()
-bb = BinaryTreeHeightBalanceChecker()
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
 root = TreeNode(5, left, right)
-print(bb.isBalanced(root))
+    
+def invert_binary_tree(root):
+    b = BinaryTreeInverter()
+    b.invertTree(root)
 
-btp = BinaryTreePathAnalyzer()
-btp.binaryTreePaths(root)
+def callBinaryTreeHeightBalanceChecker(root):
+    bb = BinaryTreeHeightBalanceChecker()
+    print(bb.isBalanced(root))
+
+def callBinaryTreePathAnalyzer(root):
+    btp = BinaryTreePathAnalyzer()
+    btp.binaryTreePaths(root)
+
 arr = [1,2,2,3,3,3,4,5]
 
 def callArrayElementRemover():
@@ -36,4 +36,14 @@ def callArrayDuplicateElementRemoverInPlace():
     len_of_array_after_duplicate_removal = ader.removeDuplicates(arr);
     print("Array Duplicate Element Remover:", len_of_array_after_duplicate_removal)
     
-callArrayDuplicateElementRemoverInPlace()
+def callArrayDuplicateElementRemoverWithAtmostTwo():
+    ader2 = ArrayDuplicateElementRemoverWithAtmostTwo()
+    len_of_array_after_duplicate_removal = ader2.removeDuplicates(arr)
+    print("Array Duplicate Element Remover 2:", len_of_array_after_duplicate_removal)
+    
+def callMajorityElementFinder():
+    mef = MajorityElementFinder()
+    val = mef.majorityElement(arr)
+    print(val)
+
+callMajorityElementFinder()
