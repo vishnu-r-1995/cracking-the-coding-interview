@@ -8,6 +8,7 @@ from src.ArrayDuplicateElementRemoverWithAtmostTwo import ArrayDuplicateElementR
 from src.MajorityElementFinder import MajorityElementFinder
 from src.ArrayRotator import ArrayRotator
 from src.ArrayRotator2 import ArrayRotator2
+from src.StockBuySellManager import StockBuySellManager
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -59,5 +60,10 @@ def callArrayRotator2():
     arr = ar2.rotate(arr2, 3)
     print(arr)
 
-callArrayRotator2()
+prices = [7,1,5,3,6,4]
+def callStockBuySellManager():
+    sbsm = StockBuySellManager()
+    max_profit = sbsm.maxProfit(prices)
+    print("Stock Buy Sell Manager - Maximum Profit:", max_profit)
     
+callStockBuySellManager()
