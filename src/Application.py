@@ -7,6 +7,7 @@ from src.ArrayDuplicateElementRemoverInPlace import ArrayDuplicateElementRemover
 from src.ArrayDuplicateElementRemoverWithAtmostTwo import ArrayDuplicateElementRemoverWithAtmostTwo
 from src.MajorityElementFinder import MajorityElementFinder
 from src.ArrayRotator import ArrayRotator
+from src.ArrayRotator2 import ArrayRotator2
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -53,4 +54,10 @@ def callArrayRotator():
     arr = ar.rotate(arr2, 6)
     print(arr)
     
-callArrayRotator()
+def callArrayRotator2():
+    ar2 = ArrayRotator2()
+    arr = ar2.rotate(arr2, 3)
+    print(arr)
+
+callArrayRotator2()
+    
