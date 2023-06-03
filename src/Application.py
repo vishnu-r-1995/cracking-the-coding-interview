@@ -11,6 +11,7 @@ from src.ArrayRotator2 import ArrayRotator2
 from src.StockBuySellManager import StockBuySellManager
 from src.StockBuySellManager2 import StockBuySellManager2
 from src.JumpGame import JumpGame
+from src.RansomNoteGenerator import RansomNoteGenerator
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -80,4 +81,11 @@ def callJumpGame():
     can_reach_last = jg.canJump(nums)
     print("Jump Game - Can Reach Last Position?:", str(can_reach_last))
 
-callJumpGame()
+ransomNote = 'aa'
+magazine = 'aab'
+def callRansomNoteGenerator():
+    rng = RansomNoteGenerator()
+    can_create_ransom_note = rng.canConstruct(ransomNote, magazine)
+    print("Ransom Note - Can create ransom note?:", str(can_create_ransom_note))
+    
+callRansomNoteGenerator()
