@@ -10,6 +10,7 @@ from src.ArrayRotator import ArrayRotator
 from src.ArrayRotator2 import ArrayRotator2
 from src.StockBuySellManager import StockBuySellManager
 from src.StockBuySellManager2 import StockBuySellManager2
+from src.JumpGame import JumpGame
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -73,4 +74,10 @@ def callStockBuySellManager2():
     max_profit = sbsm2.maxProfit(prices)
     print("Stock Buy Sell Manager 2 - Maximum Profit:", max_profit)
     
-callStockBuySellManager2()
+nums = [3,2,1,0,4]
+def callJumpGame():
+    jg = JumpGame()
+    can_reach_last = jg.canJump(nums)
+    print("Jump Game - Can Reach Last Position?:", str(can_reach_last))
+
+callJumpGame()
