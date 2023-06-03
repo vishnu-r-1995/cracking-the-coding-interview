@@ -9,6 +9,7 @@ from src.MajorityElementFinder import MajorityElementFinder
 from src.ArrayRotator import ArrayRotator
 from src.ArrayRotator2 import ArrayRotator2
 from src.StockBuySellManager import StockBuySellManager
+from src.StockBuySellManager2 import StockBuySellManager2
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -61,9 +62,15 @@ def callArrayRotator2():
     print(arr)
 
 prices = [7,1,5,3,6,4]
+
 def callStockBuySellManager():
     sbsm = StockBuySellManager()
     max_profit = sbsm.maxProfit(prices)
     print("Stock Buy Sell Manager - Maximum Profit:", max_profit)
     
-callStockBuySellManager()
+def callStockBuySellManager2():
+    sbsm2 = StockBuySellManager2()
+    max_profit = sbsm2.maxProfit(prices)
+    print("Stock Buy Sell Manager 2 - Maximum Profit:", max_profit)
+    
+callStockBuySellManager2()
