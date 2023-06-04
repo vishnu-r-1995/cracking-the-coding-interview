@@ -92,7 +92,7 @@ def callRansomNoteGenerator():
 citations = [3,0,6,1,5]
 def callHIndex():
     hi = HIndex()
-    h_index = hi.hIndex(citations)
+    h_index = hi.hIndex2(citations)
     print("H-Index - H Index of the researcher:", str(h_index))
 
 callHIndex()

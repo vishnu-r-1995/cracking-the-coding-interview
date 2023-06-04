@@ -13,3 +13,7 @@ class HIndex(object):
             if (number_of_papers_with_atleast_i_citations >= i):
                 h_index = i
         return h_index
+    
+    #More optimized solution
+    def hIndex2(self, citations):
+        return sum(i < j for i, j in enumerate(sorted(citations, reverse=True)))
