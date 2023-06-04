@@ -12,6 +12,7 @@ from src.StockBuySellManager import StockBuySellManager
 from src.StockBuySellManager2 import StockBuySellManager2
 from src.JumpGame import JumpGame
 from src.RansomNoteGenerator import RansomNoteGenerator
+from src.HIndex import HIndex
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -87,5 +88,11 @@ def callRansomNoteGenerator():
     rng = RansomNoteGenerator()
     can_create_ransom_note = rng.canConstruct(ransomNote, magazine)
     print("Ransom Note - Can create ransom note?:", str(can_create_ransom_note))
-    
-callRansomNoteGenerator()
+
+citations = [3,0,6,1,5]
+def callHIndex():
+    hi = HIndex()
+    h_index = hi.hIndex(citations)
+    print("H-Index - H Index of the researcher:", str(h_index))
+
+callHIndex()
