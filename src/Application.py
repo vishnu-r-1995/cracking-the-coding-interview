@@ -13,6 +13,7 @@ from src.StockBuySellManager2 import StockBuySellManager2
 from src.JumpGame import JumpGame
 from src.RansomNoteGenerator import RansomNoteGenerator
 from src.HIndex import HIndex
+from src.GasStationVisitor import GasStationVisitor
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -95,4 +96,11 @@ def callHIndex():
     h_index = hi.hIndex2(citations)
     print("H-Index - H Index of the researcher:", str(h_index))
 
-callHIndex()
+gas = [1,2,3,4,5]
+cost = [3,4,5,1,2]
+def callGasStationVisitor():
+    gsv = GasStationVisitor()
+    index_to_start = gsv.canCompleteCircuit2(gas, cost)
+    print("Gas Station - Index to start to complete circuit around gas stations:", str(index_to_start))
+    
+callGasStationVisitor()
