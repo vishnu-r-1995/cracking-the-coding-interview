@@ -14,6 +14,7 @@ from src.JumpGame import JumpGame
 from src.RansomNoteGenerator import RansomNoteGenerator
 from src.HIndex import HIndex
 from src.GasStationVisitor import GasStationVisitor
+from src.CoinChange import CoinChange
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -103,4 +104,11 @@ def callGasStationVisitor():
     index_to_start = gsv.canCompleteCircuit2(gas, cost)
     print("Gas Station - Index to start to complete circuit around gas stations:", str(index_to_start))
     
-callGasStationVisitor()
+coins = [1,2,5]
+amount = 20
+def callCoinChange():
+    cc = CoinChange()
+    number_of_coins = cc.coinChange(coins, amount)
+    print("Coin Change - Min number of coins to make Rs." + str(amount) + " is:", str(number_of_coins))
+
+callCoinChange()
