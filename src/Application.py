@@ -16,6 +16,7 @@ from src.HIndex import HIndex
 from src.GasStationVisitor import GasStationVisitor
 from src.CoinChange import CoinChange
 from src.PlusOneSolver import PlusOneSolver
+from src.CourseScheduler import CourseScheduler
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -117,5 +118,12 @@ def callPlusOneSolver():
     pos = PlusOneSolver()
     new_list = pos.plusOne(digits)
     print("Plus One - List of digits of integer added by 1 is:", str(new_list))
-    
-callPlusOneSolver()
+
+numCourses = 5
+prerequisites = [[1,0],[2,1],[3,2],[1,3]]
+def callCourseScheduler():
+    cs = CourseScheduler()
+    can_complete_all_courses = cs.canFinish(numCourses, prerequisites)
+    print("Course Schedule - Can complete all the courses?", str(can_complete_all_courses))
+
+callCourseScheduler()
