@@ -17,6 +17,7 @@ from src.GasStationVisitor import GasStationVisitor
 from src.CoinChange import CoinChange
 from src.PlusOneSolver import PlusOneSolver
 from src.CourseScheduler import CourseScheduler
+from src.ValidParentheses import ValidParentheses
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -126,4 +127,10 @@ def callCourseScheduler():
     can_complete_all_courses = cs.canFinish(numCourses, prerequisites)
     print("Course Schedule - Can complete all the courses?", str(can_complete_all_courses))
 
-callCourseScheduler()
+s = '(('
+def callValidParentheses():
+    vp = ValidParentheses()
+    is_valid_parentheses_block = vp.isValid(s)
+    print("Valid Parentheses - Is valid parentheses?", str(is_valid_parentheses_block))
+    
+callValidParentheses()
