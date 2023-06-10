@@ -15,6 +15,7 @@ from src.RansomNoteGenerator import RansomNoteGenerator
 from src.HIndex import HIndex
 from src.GasStationVisitor import GasStationVisitor
 from src.CoinChange import CoinChange
+from src.PlusOneSolver import PlusOneSolver
 
 left = TreeNode(2, None, None)
 right = TreeNode(4, None, None)
@@ -111,4 +112,10 @@ def callCoinChange():
     number_of_coins = cc.coinChange(coins, amount)
     print("Coin Change - Min number of coins to make Rs." + str(amount) + " is:", str(number_of_coins))
 
-callCoinChange()
+digits = [1,2,3]
+def callPlusOneSolver():
+    pos = PlusOneSolver()
+    new_list = pos.plusOne(digits)
+    print("Plus One - List of digits of integer added by 1 is:", str(new_list))
+    
+callPlusOneSolver()
