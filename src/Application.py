@@ -18,9 +18,11 @@ from src.CoinChange import CoinChange
 from src.PlusOneSolver import PlusOneSolver
 from src.CourseScheduler import CourseScheduler
 from src.ValidParentheses import ValidParentheses
+from src.MaximumDepthOfBinaryTree import MaximumDepthOfBinaryTree
 
-left = TreeNode(2, None, None)
-right = TreeNode(4, None, None)
+root_array = [3,9,20,None,None,15,7]
+left = TreeNode(9, None, None)
+right = TreeNode(20, TreeNode(15, None, None), TreeNode(7, None, None))
 root = TreeNode(5, left, right)
     
 def invert_binary_tree(root):
@@ -133,4 +135,9 @@ def callValidParentheses():
     is_valid_parentheses_block = vp.isValid(s)
     print("Valid Parentheses - Is valid parentheses?", str(is_valid_parentheses_block))
     
-callValidParentheses()
+def callMaximumDepthOfBinaryTree():
+    mdbt = MaximumDepthOfBinaryTree()
+    max_depth_of_binary_tree = mdbt.maxDepth(root)
+    print("Maximum Depth of Binary Tree - Maximum depth of binary tree:", str(max_depth_of_binary_tree))
+    
+callMaximumDepthOfBinaryTree()
