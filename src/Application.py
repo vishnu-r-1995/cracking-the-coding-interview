@@ -22,11 +22,12 @@ from src.MaximumDepthOfBinaryTree import MaximumDepthOfBinaryTree
 from src.ListNode import ListNode
 from typing import Optional
 from src.ValidPalindrome import ValidPalindrome
+from src.SumRootToLeaf import SumRootToLeaf
 
-root_array = [3,9,20,None,None,15,7]
-left = TreeNode(9, None, None)
-right = TreeNode(20, TreeNode(15, None, None), TreeNode(7, None, None))
-root = TreeNode(5, left, right)
+root_array = [4,9,0,5,1]
+left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
+right = TreeNode(0, None, None)
+root = TreeNode(4, left, right)
     
 def invert_binary_tree(root):
     b = BinaryTreeInverter()
@@ -149,4 +150,9 @@ def callValidPalindrome():
     is_palindrome = vp.isPalindrome(str_test)
     print("Valid Palindrome - Is Palindrome?", str(is_palindrome))
     
-callValidPalindrome()
+def callSumRootToLeaf():
+    srl = SumRootToLeaf()
+    sum = srl.sumNumbers(root)
+    print("Sum Root to Leaf Numbers - Sum of all root to leaf paths:", str(sum))
+    
+callSumRootToLeaf()
