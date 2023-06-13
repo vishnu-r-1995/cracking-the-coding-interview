@@ -21,6 +21,7 @@ from src.ValidParentheses import ValidParentheses
 from src.MaximumDepthOfBinaryTree import MaximumDepthOfBinaryTree
 from src.ListNode import ListNode
 from typing import Optional
+from src.ValidPalindrome import ValidPalindrome
 
 root_array = [3,9,20,None,None,15,7]
 left = TreeNode(9, None, None)
@@ -141,3 +142,11 @@ def callMaximumDepthOfBinaryTree():
     mdbt = MaximumDepthOfBinaryTree()
     max_depth_of_binary_tree = mdbt.maxDepth(root)
     print("Maximum Depth of Binary Tree - Maximum depth of binary tree:", str(max_depth_of_binary_tree))
+
+str_test = "aa!daa"
+def callValidPalindrome():
+    vp = ValidPalindrome()
+    is_palindrome = vp.isPalindrome(str_test)
+    print("Valid Palindrome - Is Palindrome?", str(is_palindrome))
+    
+callValidPalindrome()
