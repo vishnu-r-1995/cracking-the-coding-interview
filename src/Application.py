@@ -24,6 +24,7 @@ from typing import Optional
 from src.ValidPalindrome import ValidPalindrome
 from src.SumRootToLeaf import SumRootToLeaf
 from src.ClimbingStairs import ClimbingStairs
+from src.SurroundedRegions import SurroundedRegions
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -162,4 +163,9 @@ def callClimbingStairs():
     number_of_distinct_ways = cs.climbStairs(n)
     print("Climbing Stairs - Number of distinct ways to climb stairs:", str(number_of_distinct_ways))
     
-callClimbingStairs()
+board = [["X","O","X"],["O","X","O"],["X","O","X"]]
+def callSurroundedRegions():
+    sr = SurroundedRegions()
+    sr.solve(board)
+    
+callSurroundedRegions()

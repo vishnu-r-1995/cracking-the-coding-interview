@@ -1,5 +1,5 @@
 class ClimbingStairs(object):
-    self.dp_map = {}
+    dp_map = {}
     def climbStairs(self, n):
         return self.dp(n)
     def dp(self, n):
@@ -14,4 +14,4 @@ class ClimbingStairs(object):
             if (n - 1 not in self.dp_map.keys()) :
                 dp_n_minus_1 = self.dp(n-1)
                 self.dp_map[n-1] = dp_n_minus_1
-            return self.dp.get(n-2) + self.dp.get(n-1)
+            return self.dp_map.get(n-2) + self.dp_map.get(n-1)
