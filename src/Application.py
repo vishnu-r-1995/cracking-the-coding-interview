@@ -23,6 +23,7 @@ from src.ListNode import ListNode
 from typing import Optional
 from src.ValidPalindrome import ValidPalindrome
 from src.SumRootToLeaf import SumRootToLeaf
+from src.ClimbingStairs import ClimbingStairs
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -154,5 +155,11 @@ def callSumRootToLeaf():
     srl = SumRootToLeaf()
     sum = srl.sumNumbers(root)
     print("Sum Root to Leaf Numbers - Sum of all root to leaf paths:", str(sum))
+
+n = 3    
+def callClimbingStairs():
+    cs = ClimbingStairs()
+    number_of_distinct_ways = cs.climbStairs(n)
+    print("Climbing Stairs - Number of distinct ways to climb stairs:", str(number_of_distinct_ways))
     
-callSumRootToLeaf()
+callClimbingStairs()
