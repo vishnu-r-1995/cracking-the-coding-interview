@@ -25,6 +25,7 @@ from src.ValidPalindrome import ValidPalindrome
 from src.SumRootToLeaf import SumRootToLeaf
 from src.ClimbingStairs import ClimbingStairs
 from src.SurroundedRegions import SurroundedRegions
+from src.PalindromeNumber import PalindromeNumber
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -168,4 +169,10 @@ def callSurroundedRegions():
     sr = SurroundedRegions()
     sr.solve(board)
     
-callSurroundedRegions()
+x = 121
+def callPalindromeNumber():
+    pn = PalindromeNumber()
+    is_palindrome_number = pn.isPalindrome(x)
+    print("Palindrome Number - Is number a palindrome?", str(is_palindrome_number))
+    
+callPalindromeNumber()
