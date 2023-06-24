@@ -26,6 +26,7 @@ from src.SumRootToLeaf import SumRootToLeaf
 from src.ClimbingStairs import ClimbingStairs
 from src.SurroundedRegions import SurroundedRegions
 from src.PalindromeNumber import PalindromeNumber
+from src.ContainsDuplicate2 import ContainsDuplicate2
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -175,4 +176,11 @@ def callPalindromeNumber():
     is_palindrome_number = pn.isPalindrome(x)
     print("Palindrome Number - Is number a palindrome?", str(is_palindrome_number))
     
-callPalindromeNumber()
+nums = [1,2,3,1,2,3]
+k = 2
+def containsDuplicate2():
+    cd2 = ContainsDuplicate2()
+    has_nearby_duplicates = cd2.containsNearbyDuplicate(nums, k)
+    print("Contains Duplicate II - Has nearby duplicates?", str(has_nearby_duplicates))
+    
+containsDuplicate2()
