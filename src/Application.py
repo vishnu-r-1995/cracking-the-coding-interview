@@ -27,6 +27,7 @@ from src.ClimbingStairs import ClimbingStairs
 from src.SurroundedRegions import SurroundedRegions
 from src.PalindromeNumber import PalindromeNumber
 from src.ContainsDuplicate2 import ContainsDuplicate2
+from src.ReverseWordsInAString import ReverseWordsInAString
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -182,5 +183,12 @@ def containsDuplicate2():
     cd2 = ContainsDuplicate2()
     has_nearby_duplicates = cd2.containsNearbyDuplicate(nums, k)
     print("Contains Duplicate II - Has nearby duplicates?", str(has_nearby_duplicates))
+
+s = "the sky is blue"
+def reverseWordsInAString():
+    rws = ReverseWordsInAString()
+    reversed_str = rws.reverseWords(s)
+    print("Reverse Words in a String - Reversed String is:", reversed_str)
     
-containsDuplicate2()
+reverseWordsInAString()
+    
