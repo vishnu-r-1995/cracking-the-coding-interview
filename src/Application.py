@@ -28,6 +28,7 @@ from src.SurroundedRegions import SurroundedRegions
 from src.PalindromeNumber import PalindromeNumber
 from src.ContainsDuplicate2 import ContainsDuplicate2
 from src.ReverseWordsInAString import ReverseWordsInAString
+from src.SymmetricTree import SymmetricTree
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -189,6 +190,12 @@ def reverseWordsInAString():
     rws = ReverseWordsInAString()
     reversed_str = rws.reverseWords(s)
     print("Reverse Words in a String - Reversed String is:", reversed_str)
+
+root = TreeNode(1, TreeNode(2, None, None), TreeNode(3, None, None))    
+def symmetricTree():
+    st = SymmetricTree()
+    is_symmetric_tree = st.isSymmetric(root)
+    print("Symmetric Tree - Is Symmetric Tree?", str(is_symmetric_tree))
     
-reverseWordsInAString()
+symmetricTree()
     
