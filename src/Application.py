@@ -30,6 +30,7 @@ from src.ContainsDuplicate2 import ContainsDuplicate2
 from src.ReverseWordsInAString import ReverseWordsInAString
 from src.SymmetricTree import SymmetricTree
 from src.RomanToInteger import RomanToInteger
+from src.TwoSum2 import TwoSum2
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -203,5 +204,12 @@ def callRomanToInteger():
     rti = RomanToInteger()
     integer_number = rti.romanToInt(s)
     print("Roman to Integer - Integer number obtained from Roman number is:", str(integer_number))
+
+numbers = [2,3,4]
+target = 6    
+def callTwoSum2():
+    ts2 = TwoSum2()
+    list_of_number_indices = ts2.twoSum(numbers, target)
+    print("Two Sum II - Indices of numbers which adds equal to the target:", list_of_number_indices)
     
-callRomanToInteger()
+callTwoSum2()
