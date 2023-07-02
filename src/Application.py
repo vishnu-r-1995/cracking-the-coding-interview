@@ -29,6 +29,7 @@ from src.PalindromeNumber import PalindromeNumber
 from src.ContainsDuplicate2 import ContainsDuplicate2
 from src.ReverseWordsInAString import ReverseWordsInAString
 from src.SymmetricTree import SymmetricTree
+from src.RomanToInteger import RomanToInteger
 
 root_array = [4,9,0,5,1]
 left = TreeNode(9, TreeNode(5, None, None), TreeNode(1, None, None))
@@ -180,22 +181,27 @@ def callPalindromeNumber():
     
 nums = [1,2,3,1,2,3]
 k = 2
-def containsDuplicate2():
+def callContainsDuplicate2():
     cd2 = ContainsDuplicate2()
     has_nearby_duplicates = cd2.containsNearbyDuplicate(nums, k)
     print("Contains Duplicate II - Has nearby duplicates?", str(has_nearby_duplicates))
 
 s = "the sky is blue"
-def reverseWordsInAString():
+def callReverseWordsInAString():
     rws = ReverseWordsInAString()
     reversed_str = rws.reverseWords(s)
     print("Reverse Words in a String - Reversed String is:", reversed_str)
 
 root = TreeNode(1, TreeNode(2, None, None), TreeNode(3, None, None))    
-def symmetricTree():
+def callSymmetricTree():
     st = SymmetricTree()
     is_symmetric_tree = st.isSymmetric(root)
     print("Symmetric Tree - Is Symmetric Tree?", str(is_symmetric_tree))
+
+s = 'MCMXCIV'
+def callRomanToInteger():
+    rti = RomanToInteger()
+    integer_number = rti.romanToInt(s)
+    print("Roman to Integer - Integer number obtained from Roman number is:", str(integer_number))
     
-symmetricTree()
-    
+callRomanToInteger()
